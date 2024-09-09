@@ -30,8 +30,8 @@ export function getUrlParameters(
 	}
 	let regex = /[?&]([^=#]+)=([^&#]*)/g,
 		params = {},
-		match;
-	while ((match = regex.exec(url))) {
+		match = regex.exec(url);
+	while (match) {
 		if (match[1] !== null) {
 			//@ts-ignore
 			params[match[1]] = match[2];
